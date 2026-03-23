@@ -1,0 +1,5 @@
+# OpenClaw runtime data（不能 commit 進 repo）
+.openclaw/
+
+# 但保留設定資料夾結構
+!.openclaw/.gitkeep

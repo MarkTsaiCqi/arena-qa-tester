@@ -1,0 +1,14 @@
+services:
+  tester:
+    image: ghcr.io/openclaw/openclaw:latest
+    container_name: arena-tester
+    environment:
+      HOME: /home/node
+      TERM: xterm-256color
+    volumes:
+      - ./.openclaw:/home/node/.openclaw
+    ports:
+      - "18801:18789"
+    init: true
+    restart: "no"
+    command: ["node", "dist/index.js", "gateway", "--bind", "lan", "--port", "18789"]

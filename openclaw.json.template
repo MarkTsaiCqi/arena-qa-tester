@@ -1,0 +1,30 @@
+{
+  "models": {
+    "providers": {
+      "netmind": {
+        "baseUrl": "https://claude-api.netmind.ai/api",
+        "apiKey": "YOUR_NETMIND_API_KEY_HERE",
+        "api": "anthropic-messages",
+        "models": [
+          {
+            "id": "claude-sonnet-4-6",
+            "name": "Claude Sonnet 4.6",
+            "contextWindow": 200000,
+            "maxTokens": 8096
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": "netmind/claude-sonnet-4-6"
+    }
+  },
+  "gateway": {
+    "mode": "local",
+    "controlUi": {
+      "dangerouslyAllowHostHeaderOriginFallback": true
+    }
+  }
+}
