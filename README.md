@@ -107,7 +107,11 @@ cd arena-qa-tester
 cp openclaw.json.template .openclaw/openclaw.json
 ```
 
-### 步驟 3：填入你的 NetMind API Key
+### 步驟 3：填入公司提供的 API 參數
+
+公司會提供兩個參數：
+- **`ANTHROPIC_BASE_URL`** — API 端點網址
+- **`ANTHROPIC_AUTH_TOKEN`** — API 金鑰（通常 `cr_` 開頭）
 
 用文字編輯器開啟 `.openclaw/openclaw.json`：
 
@@ -115,10 +119,18 @@ cp openclaw.json.template .openclaw/openclaw.json
 nano .openclaw/openclaw.json
 ```
 
-找到這行，把 `YOUR_NETMIND_API_KEY_HERE` 換成你的 API Key（`cr_` 開頭）：
+找到這兩行，分別換成公司提供的值：
 
 ```json
-"apiKey": "YOUR_NETMIND_API_KEY_HERE"
+"baseUrl": "YOUR_ANTHROPIC_BASE_URL_HERE",
+"apiKey": "YOUR_ANTHROPIC_AUTH_TOKEN_HERE",
+```
+
+例如填完後會像這樣：
+
+```json
+"baseUrl": "https://claude-api.netmind.ai/api",
+"apiKey": "cr_xxxxxxxxxxxxxxxxxxxxxxxx",
 ```
 
 存檔（`Ctrl+O` → `Enter` → `Ctrl+X`）。
